@@ -5,7 +5,6 @@ jQuery(document).ready(function ($) {
             user_name: nameForm,
             user_phone: phoneForm
         };
-        console.log(data);
         
         $.post( MyAjax.ajaxurl, data)
             .done(function(response) {
