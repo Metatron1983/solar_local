@@ -1,0 +1,15 @@
+.section_title {
+    font-family: 'Noto-bold' , sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #868585;
+}
+
+@media(max-width: 830px) {
+    .section_title {
+        opacity: 0;
+        padding: 0 5px;
+    }
+
+}

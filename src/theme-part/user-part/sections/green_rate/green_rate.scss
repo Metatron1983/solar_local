@@ -1,0 +1,174 @@
+.green-rate {
+    margin-top: 252px;
+    &__top-subsection {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bottom-subsection {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 22px;
+    }
+    &__main-description {
+        font-family: 'Noto-bold', sans-serif;
+        font-weight: 700;
+        max-width: 600px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 25px;
+        color: #303030;
+        margin-top: -7px;
+    }
+    &__left-wrapper {
+        max-width: 510px;
+        width: 100%;
+        margin-right: auto;
+    }
+    &__main-advantage-image {
+        margin-right: 40px;
+        object-fit: cover;
+        object-position: 100% 50%;
+    }
+    &__advantages-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin-top: 99px;
+    }
+    &__advantages-textbox {
+        max-width: 235px;
+        width: 100%;
+    }
+    &__advantages-textbox:nth-child(1),
+    &__advantages-textbox:nth-child(2) {
+        margin-bottom: 20px;
+    }
+    &__advantages-text {
+        margin-top: 6px;
+    }
+
+    &__main-advantage-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__image {
+        max-width: 600px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 30%;
+    }
+}
+
+@media(max-width: 1180px){
+    .green-rate {
+        margin-top: 80px;
+        &__top-subsection {
+            display: block;
+        }
+        &__main-description {
+            max-width: unset;
+            margin-top: 15px;
+        }
+        &__bottom-subsection {
+            display: block;
+            margin-top: 22px;
+        }
+        &__left-wrapper {
+            max-width: unset;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__advantages-inner {
+            margin-top: 0px;
+            justify-content:space-around ;
+    
+        }
+        &__main-advantage-inner {
+            max-width: 510px;
+            width: 100%;
+            margin-right: 33px;
+        }
+        &__right-wrapper {
+            margin-top: 30px;
+        }
+        &__image{
+            max-width: unset;
+            width: 100%;
+            max-height: 400px;
+        }
+    }
+}
+@media(max-width: 1040px){
+    .green-rate {
+        &__left-wrapper {
+            justify-content: flex-start;
+        }
+        &__advantages-inner {
+            display: block;
+        }
+        &__advantages-textbox {
+            max-width: 600px;
+        }
+        &__advantages-textbox:nth-child(3),
+        &__advantages-textbox:nth-child(4) {
+            margin-bottom: 20px;
+        }
+        &__main-advantage-inner {
+            display: block;
+            max-width: 250px;
+        }
+        &__main-advantage-image {
+            margin-right: 0;
+        }
+        &__main_advantage_text {
+            margin-top: 15px;
+        }
+    }
+}
+@media(max-width: 640px){
+    .green-rate {
+        margin-top: 40px;
+        &__left-wrapper {
+            display: block;
+        }
+        &__main-advantage-image {
+            margin-right: 20px;
+        }
+        &__advantages-inner {
+            margin-top: 20px;
+        }
+        &__main-advantage-inner {
+            display: flex;
+            justify-content: space-around;
+            max-width: 100%;
+        }
+        &__main_advantage_text {
+            margin-top: 0px;
+        }
+    }
+}
+@media(max-width: 480px){
+    .green-rate {
+        &__main-advantage-image {
+            margin-right: 0px;
+            width: 100%;
+        }    
+        &__main-advantage-inner {
+            display: block;
+        }
+        &__main_advantage_text {
+            margin-top: 20px;
+        }
+    }
+}
+@media(max-width: 425px){
+    .green-rate {
+        &__main-description,
+        &__main_advantage_text,
+        &__advantages-inner {
+            padding: 0 5px;
+        }
+    }
+}

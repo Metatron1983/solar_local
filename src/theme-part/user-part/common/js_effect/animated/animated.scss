@@ -1,0 +1,125 @@
+.animated__fadein-up__1s,
+.animated__fadein-left__1s,
+.animated__fadein-right__1s,
+.animated__fadein__1s {
+    opacity: 0;
+}
+
+.fadein-up__1s {
+    animation-name: fadein-up__1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+
+@keyframes fadein-up__1s {
+    0% {
+        top: 30px;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        top: 0px;
+    }
+}
+.fadein-left__1s {
+    animation-name: fadein-left__1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+
+@keyframes fadein-left__1s {
+    0% {
+        left: 30px;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        left: 0px;
+    }
+}
+.fadein-right__1s {
+    animation-name: fadein-right__1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+
+@keyframes fadein-right__1s {
+    0% {
+        right: 30px;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        right: 0px;
+    }
+}
+.fadein__1s {
+    animation-name: fadein__1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+
+@keyframes fadein__1s {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.scale-right__3s {
+    animation-name: scale-right__3s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    position: relative;
+}
+
+@keyframes scale-right__3s {
+    0% {
+        transform: scale(1.1);
+        right: 5%;
+    }
+    30% {
+        right: 0%;
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.scale-left__3s {
+    animation-name: scale-left__3s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    position: relative;
+}
+
+@keyframes scale-left__3s {
+    0% {
+        transform: scale(1.1);
+        left: 5%;
+    }
+    30% {
+        left: 0%;
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

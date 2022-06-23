@@ -1,0 +1,30 @@
+@import '../vendor/normalize/normalize.scss';
+@import '../theme-part/admin-part/subpages/main_banner/admin_main_banner.scss';
+@import '../theme-part/admin-part/subpages/services/admin_services.scss';
+@import '../theme-part/admin-part/subpages/second_banner/admin_second_banner.scss';
+@import '../theme-part/admin-part/subpages/our_clients/admin_our_clients.scss';
+@import '../theme-part/admin-part/subpages/implementation_plan/admin_implementation_plan.scss';
+@import '../theme-part/admin-part/subpages/footer/admin_footer.scss';
+
+
+
+/* общие настройки */
+
+@media(max-width: 782px) {
+    .form-table th {
+        margin-top: 20px;
+    }
+    .form-table td {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .wp-responsive-open #wpbody {
+        margin-left: 16em !important;
+        right: 0 !important;
+    }
+}
+@media(max-width: 560px){
+    .wp-responsive-open #wpbody {
+        margin-left: 0 !important;
+    }
+}

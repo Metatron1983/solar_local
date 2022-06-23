@@ -1,0 +1,115 @@
+.main-banner {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 38px;
+    &__picture {
+        position: absolute;
+        z-index: -10;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__image {
+        max-width: 1920px;
+    }
+    & .container {
+        text-align: center;
+        color: #FFF;
+    }
+    &__logo {
+        margin-top: 70px;
+        opacity: 0;
+    }
+    &__top-title {
+        opacity: 0;
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 140px;
+        margin-left: 0px;
+    }
+    &__middle-title {
+        opacity: 0;
+        font-size: 64px;
+        line-height: 87px;
+        font-family: 'Noto-bold', sans-serif;
+        font-weight: 700;
+        margin-left: -10px;
+        margin-top: -1px;
+    }
+    &__bottom-title {
+        opacity: 0;
+        font-size: 42px;
+        line-height: 57px;
+        margin-left: -12px;
+        margin-top: 3px;
+    }
+    &__btn {
+        opacity: 0;
+        margin-top: 109px;
+        margin-left: 46px; 
+    }
+    & .request_btn::before  {
+            background-image: url('../img/common/btn_picto.svg');
+    }
+
+}
+
+    @media(max-width: 960px) {
+        .main-banner {
+           
+            &__image {
+                max-width: 1440px;
+            }
+            &__logo {
+                margin-top: 30px;
+            }
+            &__top-title {
+                margin-top: 40px;
+            }
+            &__middle-title {
+                font-size: 53px;
+                line-height: 50px;
+                margin-left: 0;
+                width: 480px;
+                margin: 25px auto 0;
+            }
+            &__bottom-title {
+                font-size: 30px;
+                line-height: 40px;
+                margin: 25px auto 0;
+            }
+            &__btn {
+                margin-top: 80px;
+                margin-left: 46px;
+            }
+        }
+}
+    @media(max-width: 515px) {
+        .main-banner {
+            padding-bottom: 8px;
+            &__image {
+                max-width: 1035px;
+            }
+            &__top-title {
+                margin-top: 10px;
+                font-size: 14px;
+                line-height: 19px;
+            }
+            &__middle-title {
+                font-size: 30px;
+                line-height: 37px;
+                margin-left: 0;
+                width: 270px;
+                margin: 15px auto 0;
+            }
+            &__bottom-title {
+                font-size: 22px;
+                line-height: 26px;
+                margin: 18px auto 0;
+            }
+            &__btn {
+                margin-top: 65px;
+                margin-left: 23px;
+            }
+        }
+}
+    

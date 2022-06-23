@@ -1,0 +1,123 @@
+@import '../vendor/normalize/normalize.scss';
+
+
+//stop here
+@font-face {
+    font-family: 'Noto-bold';
+    src: url('../fonts/NotoSans-Bold.woff2') format('woff2'),
+         url('../fonts/NotoSans-Bold.woff') format('woff');   
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+@font-face {
+    font-family: 'Noto-reg';
+    src: url('../fonts/NotoSans-Regular.woff2') format('woff2'),
+         url('../fonts/NotoSans-Regular.woff') format('woff');   
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+         url('../fonts/Roboto-Regular.woff') format('woff');   
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Noto-reg', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: bottom;
+    color: inherit;
+}
+
+
+img,
+svg,
+span,
+picture {
+    vertical-align: bottom;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+p {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+input {
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+@media(max-width: 425px){
+    .container {
+        padding: 0;
+    }
+}
+@import '../theme-part/user-part/common/logo/logo.scss';
+@import '../theme-part/user-part/common/Request_btn/request_btn.scss';
+@import '../theme-part/user-part/common/Social_box/social_box.scss';
+@import '../theme-part/user-part/common/section_title/section_title.scss';
+@import '../theme-part/user-part/common/content_title/content_title.scss';
+@import '../theme-part/user-part/common/content_text/content_text.scss';
+@import '../theme-part/user-part/common/js_effect/animated/animated.scss';
+
+@import '../theme-part/user-part/sections/main_banner/main_banner.scss';
+@import '../theme-part/user-part/sections/services/services.scss';
+@import '../theme-part/user-part/sections/green_rate/green_rate.scss';
+@import '../theme-part/user-part/sections/second_banner/second_banner.scss';
+@import '../theme-part/user-part/sections/our_clients/our_clients.scss';
+@import '../theme-part/user-part/sections/implementation_plan/Implementation_plan.scss';
+@import '../theme-part/user-part/sections/footer/footer.scss';
