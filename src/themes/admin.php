@@ -14,7 +14,7 @@ class Admin_panel {
     private $remove_upload_page = true;     // Медиафайлы
     private $remove_pages_page = true;      // Страницы
     private $remove_comments_page = true;   // Комментарии
-    private $remove_themes_page = true;     // Внешний вид
+    // private $remove_themes_page = true;     // Внешний вид
     private $remove_plugins_page = true;    // Плагины
     private $remove_users_page = true;      // Пользователи
     private $remove_tools_page = true;      // Инструменты

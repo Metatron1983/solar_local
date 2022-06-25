@@ -35,6 +35,7 @@ const path = {
         fonts: [`${sourceFolder}/asset/fonts/**/*.*`],
         json: [`${sourceFolder}/asset/json+xml/**/*.json`],
         xml: [`${sourceFolder}/asset/json+xml/**/*.xml`],
+        // favIco: [`${sourceFolder}/*.+(png|xml|ico|webmanifest)`]
 
     },
     build: {
@@ -51,6 +52,7 @@ const path = {
         fonts: `${destFolder}/asset/fonts/`,
         json: `${destFolder}/`,
         xml: `${destFolder}/`,
+        // favIco:`${destFolder}`,
     },
     watch: {
         txt: `${sourceFolder}/**/*.+(txt|docx)`,
@@ -65,6 +67,7 @@ const path = {
         fonts: [`${sourceFolder}/asset/fonts/**/*.*`],
         json: [`${sourceFolder}/asset/json+xml/**/*.json`],
         xml: [`${sourceFolder}/asset/json+xml/**/*.xml`],
+        // favIco: [`${sourceFolder}/*.+(png|xml|ico|webmanifest)`],
     },
     clean: destFolder,
 };
@@ -290,6 +293,18 @@ const xml = () => {
 };
 exports.xml = xml;
 
+const favIco = () => {
+    return src(path.src.favIco)
+        .pipe(rename(function(path){
+            path.dirname = '';
+        }))
+        .pipe(dest(function () {
+            return path.build.favIco;
+        }))
+        .pipe(browsersync.stream());
+};
+// exports.favIco = favIco;
+
 
 
 const clean = () => {
@@ -322,6 +337,7 @@ const watchFiles = () => {
     watch(path.watch.fonts, fonts);
     watch(path.watch.json, json);
     watch(path.watch.xml, xml);
+    // watch(path.watch.favIco, favIco);
 };
 
 exports.default = series(
@@ -341,6 +357,7 @@ exports.default = series(
         images,
         xml,
         json,
+        // favIco,
    ),
    parallel(
        watchFiles,
