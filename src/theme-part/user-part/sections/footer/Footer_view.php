@@ -1,6 +1,8 @@
 <?php
 require_once dirname(__FILE__, 1) . '/Footer_ctrl.php';
 $footer = new Footer_ctrl;
+$test = "=?utf-8?B?" . base64_encode("Тема сообщения прийдет в девственном виде!") . "?=";
+print ($test);
 ?>
 
 </main>
