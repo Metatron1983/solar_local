@@ -16,7 +16,7 @@ function modelAccordion() {
             target = event.target.parentElement;
             accordionAction(target);
         } 
-    });
+    }, {passive:true});
 
     function accordionAction(domElem) {
         if (domElem.classList.contains('services__text-box--active')){

@@ -9,42 +9,42 @@ const ourClientsRightArrowHoverSlider = document.querySelector('.js-arrow-right-
 ourClientsLeftArrowSliderBtn.addEventListener('mouseenter', () => {
     ourClientsLeftArrowSlider.classList.add('display-none');
     ourClientsLeftArrowHoverSlider.classList.remove('display-none');
-})
+}, {passive:true});
 ourClientsLeftArrowSliderBtn.addEventListener('mouseleave', function () {
     let focusElem = document.activeElement;
     if (focusElem !== this) {
         ourClientsLeftArrowSlider.classList.remove('display-none');
         ourClientsLeftArrowHoverSlider.classList.add('display-none');
     }
-})
+}, {passive:true});
 ourClientsLeftArrowSliderBtn.addEventListener('focus', () => {
     ourClientsLeftArrowSlider.classList.add('display-none');
     ourClientsLeftArrowHoverSlider.classList.remove('display-none');
-})
+}, {passive:true});
 ourClientsLeftArrowSliderBtn.addEventListener('blur', () => {
     ourClientsLeftArrowSlider.classList.remove('display-none');
     ourClientsLeftArrowHoverSlider.classList.add('display-none');
-})
+}, {passive:true});
 
 ourClientsrightArrowSliderBtn.addEventListener('mouseenter', () => {
     ourClientsRightArrowSlider.classList.add('display-none');
     ourClientsRightArrowHoverSlider.classList.remove('display-none');
-})
+}, {passive:true});
 ourClientsrightArrowSliderBtn.addEventListener('mouseleave', function () {
     let focusElem = document.activeElement;
     if (focusElem !== this) {
         ourClientsRightArrowSlider.classList.remove('display-none');
         ourClientsRightArrowHoverSlider.classList.add('display-none');
     }
-})
+}, {passive:true});
 ourClientsrightArrowSliderBtn.addEventListener('focus', () => {
     ourClientsRightArrowSlider.classList.add('display-none');
     ourClientsRightArrowHoverSlider.classList.remove('display-none');
-})
+}, {passive:true});
 ourClientsrightArrowSliderBtn.addEventListener('blur', () => {
     ourClientsRightArrowSlider.classList.remove('display-none');
     ourClientsRightArrowHoverSlider.classList.add('display-none');
-})
+}, {passive:true});
 
 
 
@@ -58,11 +58,11 @@ let previousSliderItem = 2;
 
 ourClientsLeftArrowSliderBtn.addEventListener('click', () => {
     movePreviousSlideItem();
-});
+}, {passive:true});
 
 ourClientsrightArrowSliderBtn.addEventListener('click', () => {
     moveNextSlideItem();
-});
+}, {passive:true});
 
 findNotSelectionElem();
 
@@ -128,8 +128,8 @@ function  moveSliderItemHandler() {
     function mousedownListener (event) {
         event.preventDefault();
         mousedownClientX = event.clientX; 
-        this.addEventListener('mousemove', mousemoveListener);
-        this.addEventListener('mouseup', mouseupListener);
+        this.addEventListener('mousemove', mousemoveListener, {passive:true});
+        this.addEventListener('mouseup', mouseupListener, {passive:true});
     }
 
     function mousemoveListener (event) {

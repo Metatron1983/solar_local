@@ -1,7 +1,7 @@
 let inputNameElem = document.querySelector('.footer-request__input-name');
 let lastData = '';
 
-inputNameElem.addEventListener('input', inputName);
+inputNameElem.addEventListener('input', inputName, {passive:true});
 
 function inputName(event) {
     lastData = inputNameElem.value;

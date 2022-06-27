@@ -34,7 +34,7 @@ const animationModel = function () {
             windowHeight = document.documentElement.clientHeight;
             windowBottom = windowTop + windowHeight;
             observer.noifyObservers();
-        });
+        }, {passive: true});
     }
     const createAnimatedObjList = function (animatedList) {
         for (let item of animatedList) {

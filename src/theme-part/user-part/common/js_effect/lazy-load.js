@@ -29,7 +29,7 @@ const lazyLoadModel = function() {
             windowHeight = document.documentElement.clientHeight;
             windowBottom = windowTop + windowHeight;
             observer.noifyObservers();
-        });
+        }, {passive:true});
     }
     const createLazyLoadObjList = function() {
         for (let item of lazyLoadElements) {

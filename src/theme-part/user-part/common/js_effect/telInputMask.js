@@ -12,7 +12,7 @@ function tellInputMaskModule() {
 
     const inputPhoneMask = document.querySelector('.footer-request__input-phone');
 
-    inputPhoneMask.addEventListener('focus', setPhoneNumber);
+    inputPhoneMask.addEventListener('focus', setPhoneNumber, {passive:true});
 
     function setPhoneNumber() {
         let cursorPosition = 3
@@ -29,7 +29,7 @@ function tellInputMaskModule() {
         });
     };
 
-    inputPhoneMask.addEventListener('input', inputPhone);
+    inputPhoneMask.addEventListener('input', inputPhone, {passive:true});
     let currentPhoneData = '';
     let lastValue = '';
     let lastValueLength = 0;
