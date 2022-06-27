@@ -5,9 +5,9 @@ $main_banner = new Main_banner_ctrl();
 
 <section class="main-banner js-lazy-load-section">
     <picture class="main-banner__picture">
-        <!-- <source class=" main-banner__image" srcset="//localhost:3000/wp-content/themes/solar/asset/img/main-banner/main-banner.webp" type="image/webp"> -->
-        <!-- Остановился здесь -->
-        <source class="main-banner__image" media="(max-width: 425px)" data-srcset="<?php $main_banner->get_image_Mobile1xJPG_src() ?>">
+        <source class="main-banner__image" media="(max-width: 425px)" data-srcset="<?php $main_banner->get_image_Mobile1xWEBP_src() ?>" type="image/webp">
+        <source class="main-banner__image" media="(max-width: 960px)" data-srcset="<?php $main_banner->get_image_Tablet1xWEBP_src() ?>" type="image/webp">
+        <source class="main-banner__image" data-srcset="<?php $main_banner->get_image_PC1xWEBP_src() ?>" type="image/webp">
         <source class="main-banner__image" media="(max-width: 425px)" data-srcset="<?php $main_banner->get_image_Mobile1xJPG_src() ?>">
         <source class="main-banner__image" media="(max-width: 960px)" data-srcset="<?php $main_banner->get_image_Tablet1xJPG_src() ?>">
         <img class="main-banner__image animated__scale-right__3s" data-src="<?php $main_banner->get_image_PC1xJPG_src(); ?>" alt="main banner">

@@ -12,6 +12,10 @@ $our_clients = new Our_clients_ctrl;
                 <div class="our-clients__slider-item our-clients__slider-item-1 js-lazy-load-section">
                     <div class="our-clients__slider-img-box">
                         <picture class="our-clients__picture ">
+                            <source media="(max-width: 425px)" data-srcset="<?php $our_clients->get_image_1_Mobile1xWEBP_src() ?>" class="our-clients__image" type="image/webp">
+                            <source media="(max-width: 960px)" data-srcset="<?php $our_clients->get_image_1_Tablet1xWEBP_src() ?>" class="our-clients__image" type="image/webp">
+                            <source data-srcset="<?php $our_clients->get_image_1_PC1xWEBP_src() ?>" class="our-clients__image" type="image/webp">
+
                             <source media="(max-width: 425px)" data-srcset="<?php $our_clients->get_image_1_Mobile1xJPG_src() ?>" class="our-clients__image">
                             <source media="(max-width: 960px)" data-srcset="<?php $our_clients->get_image_1_Tablet1xJPG_src() ?>" class="our-clients__image">
                             <img data-src="<?php $our_clients->get_image_1_PC1xJPG_src() ?>" alt="our clients image" class="our-clients__image animated__fadein__1s">
@@ -41,6 +45,10 @@ $our_clients = new Our_clients_ctrl;
                 <div class="our-clients__slider-item our-clients__slider-item-2 js-lazy-load-section display-none">
                     <div class="our-clients__slider-img-box">
                         <picture class="our-clients__picture">
+                            <source media="(max-width: 425px)" data-srcset="<?php $our_clients->get_image_2_Mobile1xWEBP_src() ?>" class="our-clients__image"type="image/webp">
+                            <source media="(max-width: 960px)" data-srcset="<?php $our_clients->get_image_2_Tablet1xWEBP_src() ?>" class="our-clients__image"type="image/webp">
+                            <source data-srcset="<?php $our_clients->get_image_2_PC1xWEBP_src() ?>" class="our-clients__image"type="image/webp">
+
                             <source media="(max-width: 425px)" data-srcset="<?php $our_clients->get_image_2_Mobile1xJPG_src() ?>" class="our-clients__image">
                             <source media="(max-width: 960px)" data-srcset="<?php $our_clients->get_image_2_Tablet1xJPG_src() ?>" class="our-clients__image">
                             <img data-src="<?php $our_clients->get_image_2_PC1xJPG_src() ?>" alt="our clients image" class="our-clients__image animated__fadein__1s">
@@ -70,6 +78,10 @@ $our_clients = new Our_clients_ctrl;
                 <div class="our-clients__slider-item our-clients__slider-item-3 js-lazy-load-section display-none">
                     <div class="our-clients__slider-img-box">
                         <picture class="our-clients__picture">
+                            <source media="(max-width: 425px)" data-srcset="<?php $our_clients->get_image_3_Mobile1xWEBP_src() ?>" class="our-clients__image" type="image/webp">
+                            <source media="(max-width: 960px)" data-srcset="<?php $our_clients->get_image_3_Tablet1xWEBP_src() ?>" class="our-clients__image" type="image/webp">
+                            <source data-srcset="<?php $our_clients->get_image_3_PC1xWEBP_src() ?>" class="our-clients__image" type="image/webp">
+
                             <source media="(max-width: 425px)" data-srcset="<?php $our_clients->get_image_3_Mobile1xJPG_src() ?>" class="our-clients__image">
                             <source media="(max-width: 960px)" data-srcset="<?php $our_clients->get_image_3_Tablet1xJPG_src() ?>" class="our-clients__image">
                             <img data-src="<?php $our_clients->get_image_3_PC1xJPG_src() ?>" alt="our clients image" class="our-clients__image animated__fadein__1s">

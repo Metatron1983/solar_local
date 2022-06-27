@@ -50,7 +50,10 @@ $footer = new Footer_ctrl;
         </div>
     </div>
     <div class="footer__main-background-wrapper">
+    <picture class="footer__background-picture">
+        <source class="footer__background-image" data-srcset="<?php $footer->get_main_background_WEBP_src() ?>" type="image/webp">
         <img class="footer__background-image" data-src="<?php $footer->get_main_background_src() ?>" alt="footer background">
+    </picture>
     </div>
 </footer>
 <?php wp_footer(); ?>

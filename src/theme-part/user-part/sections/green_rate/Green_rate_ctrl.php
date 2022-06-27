@@ -28,6 +28,11 @@ class Green_rate_ctrl extends User_section_ctrl {
         $data = $this->get_img_data($this->fields_name->main_advantage_image);
         return print($data);
     }
+    public function get_main_advantage_image_WEBP_src() {
+        $data = $this->get_img_data($this->fields_name->main_advantage_image);
+        $data = $this->file_img_name_webp ($data);
+        return print($data);
+    }
     public function get_advantage_1_title(string $class_name) {
         $this->show_content_title($this->fields_name->advantage_1_title, $class_name);
     }
@@ -56,12 +61,27 @@ class Green_rate_ctrl extends User_section_ctrl {
         $data = $this->get_img_data($this->fields_name->explanation_image_PC1xJPG);
         return print($data);
     }
+    public function get_explanation_image_PC1xWEBP_src() {
+        $data = $this->get_img_data($this->fields_name->explanation_image_PC1xJPG);
+        $data = $this->file_img_name_webp ($data);
+        return print($data);
+    }
     public function get_explanation_image_Tablet1xJPG_src() {
         $data = $this->get_img_data($this->fields_name->explanation_image_Tablet1xJPG);
         return print($data);
     }
+    public function get_explanation_image_Tablet1xWEBP_src() {
+        $data = $this->get_img_data($this->fields_name->explanation_image_Tablet1xJPG);
+        $data = $this->file_img_name_webp ($data);
+        return print($data);
+    }
     public function get_explanation_image_Mobile1xJPG_src() {
         $data = $this->get_img_data($this->fields_name->explanation_image_Mobile1xJPG);
+        return print($data);
+    }
+    public function get_explanation_image_Mobile1xWEBP_src() {
+        $data = $this->get_img_data($this->fields_name->explanation_image_Mobile1xJPG);
+        $data = $this->file_img_name_webp ($data);
         return print($data);
     }
 

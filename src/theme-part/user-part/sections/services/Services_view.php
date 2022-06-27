@@ -5,7 +5,7 @@ $services = new Services_ctrl;
 
 <section class="services js-lazy-load-section">
     <div class="container">
-        <?php $services->show_main_title()?>
+        <?php $services->show_main_title() ?>
         <div class="services__content-wrapper">
             <div class="services__text-inner">
                 <div class="services__text-box">
@@ -34,6 +34,11 @@ $services = new Services_ctrl;
                 </div>
             </div>
             <picture class="services__picture">
+
+                <source class="services__image" media="(max-width: 425px)" data-srcset="<?php $services->get_image_Mobile1xWEBP_src() ?>" type="image/webp">
+                <source class="services__image" media="(max-width: 960px)" data-srcset="<?php $services->get_image_Tablet1xWEBP_src() ?>" type="image/webp">
+                <source class="services__image" data-srcset="<?php $services->get_image_PC1xWEBP_src() ?>" type="image/webp">
+                
                 <source class="services__image" media="(max-width: 425px)" data-srcset="<?php $services->get_image_Mobile1xJPG_src() ?>">
                 <source class="services__image" media="(max-width: 960px)" data-srcset="<?php $services->get_image_Tablet1xJPG_src() ?>">
                 <img class="services__image animated__fadein-left__1s" data-src="<?php $services->get_image_PC1xJPG_src() ?>" alt="services img">

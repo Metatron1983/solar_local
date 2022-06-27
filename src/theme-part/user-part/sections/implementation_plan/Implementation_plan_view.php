@@ -33,8 +33,12 @@ $plan = new Implementation_plan_ctrl;
                 </div>
             </div>
             <picture class="implementation-plan__picture">
-                <source class="implementation-plan__image" media="(max-width: 960px)" data-srcset="<?php $plan->get_image_Mobile1xJPG_src() ?>">
-                <source class="implementation-plan__image" media="(max-width: 425px)" data-srcset="<?php $plan->get_image_Tablet1xJPG_src() ?>">
+                <source class="implementation-plan__image" media="(max-width: 425px)"  data-srcset="<?php $plan->get_image_Mobile1xWEBP_src() ?>" type="image/webp">
+                <source class="implementation-plan__image" media="(max-width: 960px)" data-srcset="<?php $plan->get_image_Tablet1xWEBP_src() ?>" type="image/webp">
+                <source class="implementation-plan__image" data-srcset="<?php $plan->get_image_PC1xWEBP_src() ?>" type="image/webp">
+
+                <source class="implementation-plan__image" media="(max-width: 425px)"  data-srcset="<?php $plan->get_image_Mobile1xJPG_src() ?>">
+                <source class="implementation-plan__image" media="(max-width: 960px)" data-srcset="<?php $plan->get_image_Tablet1xJPG_src() ?>">
                 <img class="implementation-plan__image animated__fadein-left__1s" data-src="<?php $plan->get_image_PC1xJPG_src() ?>" alt="implementation plan image">
             </picture>
         </div>

@@ -45,6 +45,13 @@ class User_section_ctrl {
         $data = $this->img_folder_path .  $this->page_data_getter->get_main_banner_data($this->db_table_name, $field_name);
         return $data;
     }
+
+    protected function file_img_name_webp (string $file_img_name): string {
+        $finde_chr = ".";
+        $webp_name = substr($file_img_name, 0, strrpos($file_img_name, $finde_chr)) . ".webp";
+        return $webp_name;
+    }
+
     protected function show_main_title_common(string $field_name, string $class_name): void {
         $data = $this->get_text_data($field_name);
         $this->section_title->show($data, $class_name);

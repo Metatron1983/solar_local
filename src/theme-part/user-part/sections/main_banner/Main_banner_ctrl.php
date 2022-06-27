@@ -40,6 +40,12 @@ class Main_banner_ctrl {
         return $data;
     }
 
+    private function file_img_name_webp (string $file_img_name): string {
+        $finde_chr = ".";
+        $webp_name = substr($file_img_name, 0, strrpos($file_img_name, $finde_chr)) . ".webp";
+        return $webp_name;
+    }
+
     public function show_logo() {
         $src = $this->get_img_data($this->fields_name->logo_src);
         $this->logo_img->show($src, 'main-banner__logo');
@@ -48,14 +54,32 @@ class Main_banner_ctrl {
         $data = $this->get_img_data($this->fields_name->image_PC1xJPG);
         return print($data);
     }
+    public function get_image_PC1xWEBP_src() {
+        $data = $this->get_img_data($this->fields_name->image_PC1xJPG);
+        $data = $this->file_img_name_webp ($data);
+        return print($data);
+    }
+    
     public function get_image_Tablet1xJPG_src() {
         $data = $this->get_img_data($this->fields_name->image_Tablet1xJPG);
         return print($data);
     }
+    public function get_image_Tablet1xWEBP_src() {
+        $data = $this->get_img_data($this->fields_name->image_Tablet1xJPG);
+        $new_file_img_name_webp = $this->file_img_name_webp ($data);
+        return print($new_file_img_name_webp);
+    }
+
     public function get_image_Mobile1xJPG_src() {
         $data = $this->get_img_data($this->fields_name->image_Mobile1xJPG);
         return print($data);
     }
+    public function get_image_Mobile1xWEBP_src() {
+        $data = $this->get_img_data($this->fields_name->image_Mobile1xJPG);
+        $new_file_img_name_webp = $this->file_img_name_webp ($data);
+        return print($new_file_img_name_webp);
+    }
+
     public function get_top_title_text () {
         $text = $this->get_text_data($this->fields_name->top_title);
         return print($text);

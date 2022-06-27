@@ -1,7 +1,8 @@
 <?php
 require_once get_template_directory() ."/config.php";
 require_once dirname(__FILE__, 5) ."/services/DB_adapter.php";
-require_once dirname(__FILE__, 5) ."/app/Page_data_getter.php"; 
+require_once dirname(__FILE__, 5) ."/app/Page_data_getter.php";
+require_once dirname(__FILE__, 3) ."/common/convertor_to_webp/Convertor_to_webp.php";  
 
 
 class Admin_green_rate_ctrl {
@@ -10,12 +11,14 @@ class Admin_green_rate_ctrl {
     private Page_data_getter $page_data_getter;
     private Db_tables_name $db_tables_name; 
     private Db_green_rate_tbl_field_name $db_tbl_field_name;
+    private Convertor_to_webp $webp_convertor;
 
     public function __construct() {
         $this->db_tables_name = new Db_tables_name(); 
         $this->db_tbl_field_name = new Db_green_rate_tbl_field_name();
         $this->db_adapter = new DB_adapter();
         $this->page_data_getter = new Page_data_getter($this->db_adapter);
+        $this->webp_convertor = new Convertor_to_webp('green_rate');
         $this->update_content();
     }
 
@@ -73,7 +76,34 @@ class Admin_green_rate_ctrl {
         if(file_exists($path_curr_file)) unlink($path_curr_file);
 
         move_uploaded_file($path_upload_from, $path_upload_to);
+
+        $current_img_name_webp = $this->file_img_name_webp ($current_img_name);
+        $path_curr_file_webp = dirname(__DIR__, 4) . "/asset/img/green_rate/" . $current_img_name_webp; 
+        if(file_exists($path_curr_file_webp)) unlink($path_curr_file_webp);
+        // new webp file
+        $new_file_img_name = $field_content; 
+        
+        $new_file_img_name_webp = $this->file_img_name_webp ($new_file_img_name);
+        $new_file_img_format = $this->file_img_name_format($new_file_img_name);
+        
+        if($new_file_img_format == '.jpg' || $new_file_img_format == '.jpeg') {
+            $this->webp_convertor->convert_from_jpg($new_file_img_name, $new_file_img_name_webp);
+        }
+        if($new_file_img_format == '.png') {
+            $this->webp_convertor->convert_from_png($new_file_img_name, $new_file_img_name_webp);
+        }
     }
+
+    private function file_img_name_format(string $file_img_name): string {
+        $finde_chr = ".";
+        $format = substr($file_img_name, strrpos($file_img_name, $finde_chr));
+        return $format;
+     }
+     private function file_img_name_webp (string $file_img_name): string {
+        $finde_chr = ".";
+        $webp_name = substr($file_img_name, 0, strrpos($file_img_name, $finde_chr)) . ".webp";
+        return $webp_name;
+     }
 
     private function get_data(string $field_name){
         $table_name = $this->db_tables_name->green_rate;

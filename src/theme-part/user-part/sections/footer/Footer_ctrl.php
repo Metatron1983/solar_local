@@ -56,12 +56,13 @@ class Footer_ctrl extends User_section_ctrl {
         $data = $this->get_text_data($this->fields_name->work_schedule);
         return print($data);
     }
-    public function get_main_background():string {
-        $data = $this->get_text_data($this->fields_name->main_background);
-        return print($data);
-    }
     public function get_main_background_src():string {
         $data = $this->get_img_data($this->fields_name->main_background);
+        return print($data);
+    }
+    public function get_main_background_WEBP_src():string {
+        $data = $this->get_img_data($this->fields_name->main_background);
+        $data = $this->file_img_name_webp ($data);
         return print($data);
     }
     public function get_placeholder_private_policy():string {

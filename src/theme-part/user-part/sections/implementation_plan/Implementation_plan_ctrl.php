@@ -67,5 +67,20 @@ class Implementation_plan_ctrl extends User_section_ctrl {
         $data = $this->get_img_data($this->fields_name->image_Mobile1xJPG);
         return print($data);
     }
+    public function get_image_PC1xWEBP_src() {
+        $data = $this->get_img_data($this->fields_name->image_PC1xJPG);
+        $data = $this->file_img_name_webp ($data);
+        return print($data);
+    }
+    public function get_image_Tablet1xWEBP_src() {
+        $data = $this->get_img_data($this->fields_name->image_Tablet1xJPG);
+        $data = $this->file_img_name_webp ($data);
+        return print($data);
+    }
+    public function get_image_Mobile1xWEBP_src() {
+        $data = $this->get_img_data($this->fields_name->image_Mobile1xJPG);
+        $data = $this->file_img_name_webp ($data);
+        return print($data);
+    }
 }
 ?>

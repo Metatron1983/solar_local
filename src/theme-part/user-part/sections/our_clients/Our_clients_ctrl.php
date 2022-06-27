@@ -53,6 +53,53 @@ class Our_clients_ctrl extends User_section_ctrl {
         $data = $this->get_img_data($this->fields_name->image_3_Mobile1xJPG);
         return print($data);
     }
+
+    public function get_image_1_PC1xWEBP_src():string {
+        $data = $this->get_img_data($this->fields_name->image_1_PC1xJPG);
+        $data = $this->file_img_name_webp ($data);
+        return print($data);
+    }
+    public function get_image_2_PC1xWEBP_src():string {
+        $data = $this->get_img_data($this->fields_name->image_2_PC1xJPG);
+        $data = $this->file_img_name_webp($data);
+        return print($data);
+    }
+    public function get_image_3_PC1xWEBP_src():string {
+        $data = $this->get_img_data($this->fields_name->image_3_PC1xJPG);
+        $data = $this->file_img_name_webp($data);
+        return print($data);
+    }
+    public function get_image_1_Tablet1xWEBP_src():string {
+        $data = $this->get_img_data($this->fields_name->image_1_Tablet1xJPG);
+        $data = $this->file_img_name_webp($data);
+        return print($data);
+    }
+    public function get_image_2_Tablet1xWEBP_src():string {
+        $data = $this->get_img_data($this->fields_name->image_2_Tablet1xJPG);
+        $data = $this->file_img_name_webp($data);
+        return print($data);
+    }
+    public function get_image_3_Tablet1xWEBP_src():string {
+        $data = $this->get_img_data($this->fields_name->image_3_Tablet1xJPG);
+        $data = $this->file_img_name_webp($data);
+        return print($data);
+    }
+    public function get_image_1_Mobile1xWEBP_src():string {
+        $data = $this->get_img_data($this->fields_name->image_1_Mobile1xJPG);
+        $data = $this->file_img_name_webp($data);
+        return print($data);
+    }
+    public function get_image_2_Mobile1xWEBP_src():string {
+        $data = $this->get_img_data($this->fields_name->image_2_Mobile1xJPG);
+        $data = $this->file_img_name_webp($data);
+        return print($data);
+    }
+    public function get_image_3_Mobile1xWEBP_src():string {
+        $data = $this->get_img_data($this->fields_name->image_3_Mobile1xJPG);
+        $data = $this->file_img_name_webp($data);
+        return print($data);
+    }
+
     public function show_content_title_1_text() {
         $field_name = $this->fields_name->title_1;
         $class_name = 'our-clients__title our-clients__title-1';
