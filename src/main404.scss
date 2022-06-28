@@ -1,4 +1,18 @@
-.test5
-  {
-    box-sizing: border-box;
+@import './themes/main.scss';
+
+.page404 {
+  height: 100vh;
+  & .main-banner__image {
+    height: 100vh;
+    object-fit: cover;
+  }
+  & .main-banner__middle-title {
+    margin-top: 50px;
+  }
+  & .main-banner__bottom-title {
+    color: #a9a32a;
+  }
+  & .social__list {
+    margin-top: 130px;
+  }
 }
